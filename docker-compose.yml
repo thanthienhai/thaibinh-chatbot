@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - VECTOR_DB_HOST=chroma
+    depends_on:
+      - chroma
+  
+  chroma:
+    image: chromadb/chroma
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/data
+
+volumes:
+  chroma_data:
