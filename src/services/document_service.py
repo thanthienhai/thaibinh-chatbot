@@ -1,4 +1,4 @@
-from src.core.text_splitter import TextSplitterManager
+from src.core.chunking import TextSplitterManager
 from src.core.vector_store import VectorStoreManager
 from src.models.schemas import Document
 
