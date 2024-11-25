@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import List, Optional
 
 class Message(BaseModel):
-    role: str
-    content: str
+    text: str
 
 class ChatHistory(BaseModel):
     messages: List[Message]
 
 class ChatRequest(BaseModel):
-    message: str
+    input: str
     history: Optional[ChatHistory]
 
 class ChatResponse(BaseModel):
-    answer: str
-    context: Optional[str]
+    output: str
+    intermediate_steps: list[str]
+
 
 class Document(BaseModel):
     content: str

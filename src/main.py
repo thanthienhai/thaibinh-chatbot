@@ -1,12 +1,96 @@
-from fastapi import FastAPI
-from src.config.settings import settings
-from src.api.routes import chat, document
+from fastapi import FastAPI, HTTPException
+from src.agents.rag_agent import rag_agent_executor
+from src.models.schemas import Message, ChatResponse
+from src.utils.async_utils import async_retry1
+from asyncio import TimeoutError,wait_for
+import logging
+from pydantic import BaseModel
+from typing import Optional, List
 
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 app = FastAPI(
-    title=settings.PROJECT_NAME,
-    version=settings.VERSION,
-    openapi_url=f"{settings.API_V1_STR}/openapi.json"
+    title="Lyli",
+    description="Endpoints for a asisstant system graph RAG chatbot",
 )
 
-app.include_router(chat.router, prefix=settings.API_V1_STR)
-app.include_router(document.router, prefix=settings.API_V1_STR)
+
+@async_retry1(max_retries=3, delay=1)
+async def invoke_agent_with_retry(query: str, timeout: int = 30):
+    """
+    Retry the agent if a tool fails to run. This can help when there
+    are intermittent connection issues to external APIs.
+    """
+    print("invoke_agent_with_retry")
+    try:
+        # Adding a timeout to ensure the query does not hang indefinitely
+        response = await wait_for(rag_agent_executor.ainvoke({"input": query}), timeout=timeout)
+        return response
+    except TimeoutError:
+        logger.error(f"Query timed out after {timeout} seconds.")
+        raise
+    except Exception as e:
+        logger.error(f"Error invoking agent: {e}")
+        raise
+
+
+@app.get("/")
+async def get_status():
+    return {"status": "running"}
+
+
+@app.post("/docs-rag-agent", response_model=ChatResponse)
+async def ask_docs_agent(query: Message) -> ChatResponse:
+    try:
+        # Call the agent with retry mechanism
+        query_response = await invoke_agent_with_retry(query.text)
+        
+        if query_response is None:
+            # Log the failure and return a default response indicating failure
+            logger.error("invoke_agent_with_retry returned None after all retry attempts.")
+            return ChatResponse(
+                success=False,
+                intermediate_steps=["No response from the agent."],
+                output="Failed to get a response."
+            )
+
+        # Ensure 'intermediate_steps' exists in the response
+        if "intermediate_steps" not in query_response:
+            logger.error("Invalid response structure: 'intermediate_steps' key is missing.")
+            query_response["intermediate_steps"] = ["No intermediate steps available."]
+
+        # Process intermediate steps into strings if necessary
+        try:
+            query_response["intermediate_steps"] = [
+                str(step) for step in query_response.get("intermediate_steps", [])
+            ]
+        except Exception as e:
+            logger.error(f"Error processing 'intermediate_steps': {e}")
+            query_response["intermediate_steps"] = ["Error processing intermediate steps."]
+
+        # Construct the final response object
+        query_response["intermediate_steps"] = [
+        str(s) for s in query_response.get("intermediate_steps", [])]
+        final_response = ChatResponse(
+            success=True,
+            intermediate_steps=query_response.get("intermediate_steps", []),
+            output=query_response.get("output", "No output text provided.")
+        )
+        print("✅"*20)
+        return final_response
+
+    except Exception as e:
+        # Catch unexpected errors, log them, and return a failure response
+        logger.error(f"Unexpected error in ask_market_agent: {e}")
+        return ChatResponse(
+            success=False,
+            intermediate_steps=["An unexpected error occurred."],
+            output=str(e)
+        )
