@@ -13,4 +13,4 @@ regex
 python-docx 
 pypandoc 
 pdfplumber
-
+langchain-openai
