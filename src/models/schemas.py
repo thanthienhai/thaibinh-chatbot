@@ -3,6 +3,7 @@ from typing import List, Optional
 
 class Message(BaseModel):
     text: str
+    session: str
 
 class ChatHistory(BaseModel):
     messages: List[Message]

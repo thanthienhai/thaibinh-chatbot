@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from src.agents.rag_agent import rag_agent_executor
-from src.models.schemas import Message, ChatResponse
-from src.utils.async_utils import async_retry1
+from agents.rag_agent import chat_agent
+from models.schemas import Message, ChatResponse
+from utils.async_utils import async_retry1
 from asyncio import TimeoutError,wait_for
 import logging
 from pydantic import BaseModel
@@ -23,15 +23,18 @@ app = FastAPI(
 
 
 @async_retry1(max_retries=3, delay=1)
-async def invoke_agent_with_retry(query: str, timeout: int = 30):
+async def invoke_agent_with_retry(message: Message, timeout: int = 30):
     """
     Retry the agent if a tool fails to run. This can help when there
     are intermittent connection issues to external APIs.
     """
     print("invoke_agent_with_retry")
+    print(message)
     try:
         # Adding a timeout to ensure the query does not hang indefinitely
-        response = await wait_for(rag_agent_executor.ainvoke({"input": query}), timeout=timeout)
+        response = await wait_for(chat_agent.ainvoke(
+                                                    {"input": message.text},
+                                                    {"configurable": {"session_id": message.session}}), timeout=timeout)
         return response
     except TimeoutError:
         logger.error(f"Query timed out after {timeout} seconds.")
@@ -47,10 +50,10 @@ async def get_status():
 
 
 @app.post("/docs-rag-agent", response_model=ChatResponse)
-async def ask_docs_agent(query: Message) -> ChatResponse:
+async def ask_docs_agent(message: Message) -> ChatResponse:
     try:
         # Call the agent with retry mechanism
-        query_response = await invoke_agent_with_retry(query.text)
+        query_response = await invoke_agent_with_retry(message)
         
         if query_response is None:
             # Log the failure and return a default response indicating failure

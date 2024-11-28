@@ -67,43 +67,6 @@ Instructions:
 3. Node Output: Do not return entire nodes or embedding properties. Focus on specific attributes relevant to the user’s question.
 4. Example Usage: Use the examples provided to guide your translations. Structure your queries similarly for consistency and clarity.
 
-Examples of Cypher Statements:
-
-
-2. Looking for the price of the product
-   ```cypher
-MATCH (p:Product {{name: "ProductName"}})
-RETURN "Bạn đã nhận được giá của sản phẩm hãy trả về thông tin cho khách hàng, đây là giá:" + p.price
-    ```
-
-3. Tìm sản phẩm thuộc Category này
-   ```cypher
-MATCH (c:Category {{name: "CategoryName"}})<-[:BELONGS_TO]-(p:Product)
-RETURN p.name
-    ```
-4. Looking for the overview about the reivew and product information
-   ```cypher
-MATCH (p:Product {{name: "ProductName"}})
-
-MATCH (p)<-[:REVIEWED]-(r:Review)
-WHERE r.rating >= 4
-WITH p, r
-LIMIT 3 // Limit to 3 positive reviews
-WITH p, COLLECT(r) AS positiveReviews
-
-MATCH (p)<-[:REVIEWED]-(r:Review)
-WHERE r.rating <= 2
-WITH p, positiveReviews, r
-LIMIT 3 // Limit to 3 negative reviews
-WITH p, positiveReviews, COLLECT(r) AS negativeReviews
-RETURN 
-    p.name AS productName,
-    "Mô tả ngắn: " + LEFT(p.description, 300) + "..." AS descriptionText,
-    "Đánh giá tích cực: " + positiveReviews AS PositiveReviews,
-    "Đánh giá tiêu cực: " + negativeReviews AS NegativeReviews
-    
-    ```
-
 Schema:
 {schema}
 
