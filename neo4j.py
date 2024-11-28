@@ -8,7 +8,7 @@ def get_session_id():
     return get_script_run_ctx().session_id
 
 # URL API
-CHATBOT_URL = "http://localhost:8000/docs-rag-agent"
+CHATBOT_URL = "https://thaibinh-chatbot.onrender.com/docs-rag-agent"
 
 # Tùy chỉnh giao diện
 st.set_page_config(page_title="Tỉnh Đoàn Thái Bình - Chatbot", page_icon="logo-doan.png", layout="centered")
