@@ -45,11 +45,16 @@ with st.sidebar:
     st.info("📞 **Thông tin hỗ trợ:** [Liên hệ chúng tôi](#)")
 
 # Tiêu đề chính
-st.title("Chatbot Hỗ trợ hỏi đáp về Điều lệ Đoàn Thanh niên")
+col1, col2, col3 = st.columns([1,1,1])
+with col2:
+    st.image('huy-hieu-doan.png', width=150)
+
+col1, col2, col3 = st.columns([0.5,5,1])
+with col2:
+    st.title("ChatGPT Nghiệp vụ Đoàn")
 st.write("---")  # Đường phân cách
 st.info(
-    """Chào mừng bạn! Tôi là chatbot hỗ trợ tìm hiểu về Điều lệ Đoàn Thanh niên Cộng sản Hồ Chí Minh khóa XII.
-    Bạn có thể đặt câu hỏi bất kỳ về tổ chức, hoạt động, hoặc quy trình của Đoàn."""
+    """Chào bạn! Tôi là ChatGPT hỗ trợ Nghiệp vụ công tác Đoàn. Bạn có thể đặt bất kỳ câu hỏi nào về tổ chức, hoạt động của tổ chức Đoàn."""
 )
 
 # Hộp chat
