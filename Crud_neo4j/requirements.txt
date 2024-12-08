@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+neo4j[async]
+streamlit
+pdfplumber
+python-docx
+python-multipart
+langchain-unstructured
+python-dotenv

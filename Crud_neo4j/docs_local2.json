@@ -1,0 +1,440 @@
+[
+    {
+        "page_content": "BAN CHẤP HÀNH TRUNG ƯƠNG *** Số: 1014  -QĐ/TWĐTN-TNTH ĐOÀN TNCS HỒ CHÍ MINH Hà Nội, ngày  18   tháng 10  năm 2019",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "emphasized_text_contents": [
+                "BAN CHẤP HÀNH TRUNG ƯƠNG",
+                "1014",
+                "ĐOÀN TNCS HỒ CHÍ MINH",
+                "Hà Nội, ngày",
+                "18",
+                "tháng",
+                "10",
+                "năm 201",
+                "9"
+            ],
+            "emphasized_text_tags": [
+                "b",
+                "b",
+                "b",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "text_as_html": "<table><tr><td>BAN CHẤP HÀNH TRUNG ƯƠNG *** Số: 1014 -QĐ/TWĐTN-TNTH</td><td>ĐOÀN TNCS HỒ CHÍ MINH Hà Nội, ngày 18 tháng 10 năm 2019</td></tr></table>",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "category": "Table",
+            "element_id": "fbfd64d7be079318723d595e5a7b3ff6"
+        }
+    },
+    {
+        "page_content": "QUYẾT ĐỊNH",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "QUYẾT ĐỊNH"
+            ],
+            "emphasized_text_tags": [
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "category": "Title",
+            "element_id": "41f78d6a37f5528bf07d71dfbf3b6ece"
+        }
+    },
+    {
+        "page_content": "Về việc ban hành Quy chế giải thưởng “Nhà giáo trẻ tiêu biểu” ",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "Về việc ban hành Quy",
+                "chế",
+                "giải thưởng “",
+                "Nhà giáo trẻ tiêu biểu",
+                "Nhà giáo trẻ tiêu biểu",
+                "”"
+            ],
+            "emphasized_text_tags": [
+                "b",
+                "b",
+                "b",
+                "b",
+                "i",
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "41f78d6a37f5528bf07d71dfbf3b6ece",
+            "category": "UncategorizedText",
+            "element_id": "a80294b5f5652403bcc7b9f3229dc2c1"
+        }
+    },
+    {
+        "page_content": "cấp Trung ương ",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "cấp Trung ương"
+            ],
+            "emphasized_text_tags": [
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "category": "Title",
+            "element_id": "96cfb838a106625232b19361ebbb9ef7"
+        }
+    },
+    {
+        "page_content": "-----------",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "96cfb838a106625232b19361ebbb9ef7",
+            "category": "UncategorizedText",
+            "element_id": "1b366f291ec91b4818106e46216a7607"
+        }
+    },
+    {
+        "page_content": "BAN BÍ THƯ TRUNG ƯƠNG ĐOÀN TNCS HỒ CHÍ MINH",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "BAN BÍ THƯ TRUNG ƯƠNG ĐOÀN TNCS HỒ CHÍ MINH"
+            ],
+            "emphasized_text_tags": [
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "category": "Title",
+            "element_id": "c1ebe80272fb527fbf79505f8e9dd287"
+        }
+    },
+    {
+        "page_content": "- Căn cứ Điều 31, Chương IX, Điều lệ Đoàn TNCS Hồ Chí Minh;",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "- Căn cứ",
+                "Đ",
+                "iều 31",
+                ", Chương",
+                "IX",
+                ", Điều lệ Đoàn TNCS Hồ Chí Minh;"
+            ],
+            "emphasized_text_tags": [
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "c1ebe80272fb527fbf79505f8e9dd287",
+            "category": "ListItem",
+            "element_id": "bad3aeb845dbd0dd3dbcc46cb48d13ef"
+        }
+    },
+    {
+        "page_content": "- Căn cứ Quy chế hoạt động của Ban Chấp hành Trung ương Đoàn TNCS Hồ Chí Minh khoá XI, Quy chế thi đua, khen thưởng của Đoàn TNCS Hồ Chí Minh ban hành kèm theo Quyết định số 109-QĐ/TWĐTN-VP ngày 15/8/2018             của Ban Thường vụ Trung ương Đoàn TNCS Hồ Chí Minh;",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "- Căn cứ",
+                "Quy chế hoạt động của Ban Chấp hành Trung ương Đoàn",
+                "TNCS Hồ Chí Minh",
+                "khoá X",
+                "I",
+                ",",
+                "Quy chế thi đua, khen thưởng của Đoàn TNCS Hồ Chí Minh ban hành kèm theo Quyết định số",
+                "109",
+                "-Q",
+                "Đ",
+                "/TW",
+                "Đ",
+                "TN-VP ngày",
+                "15/8/2018",
+                "của Ban Th",
+                "ư",
+                "ờng vụ Trung",
+                "ươ",
+                "ng",
+                "Đ",
+                "oàn TNCS Hồ Chí Minh",
+                ";"
+            ],
+            "emphasized_text_tags": [
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i",
+                "i"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "c1ebe80272fb527fbf79505f8e9dd287",
+            "category": "ListItem",
+            "element_id": "764c2776a6238d066ef370307ebf72b7"
+        }
+    },
+    {
+        "page_content": "- Xét đề nghị của Ban Thanh niên Trường học Trung ương Đoàn,",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "- Xét đề nghị của Ban",
+                "Thanh niên Trường học",
+                "Trung ương Đoàn",
+                ","
+            ],
+            "emphasized_text_tags": [
+                "i",
+                "i",
+                "i",
+                "i"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "c1ebe80272fb527fbf79505f8e9dd287",
+            "category": "ListItem",
+            "element_id": "16de3ffcca4d2c6550585fcc9eeeafd7"
+        }
+    },
+    {
+        "page_content": "QUYẾT ĐỊNH",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "QUYẾT ĐỊNH"
+            ],
+            "emphasized_text_tags": [
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "category": "Title",
+            "element_id": "a09b52e0fe628a90489d2d8c25be079c"
+        }
+    },
+    {
+        "page_content": "Điều 1. Ban hành kèm theo Quyết định này Quy chế giải thưởng “Nhà giáo trẻ tiêu biểu” cấp Trung ương dành cho giáo viên, giảng viên trẻ đang công tác, giảng dạy trong các trường, cơ sở giáo dục đào tạo, cơ sở giáo dục nghề nghiệp thuộc hệ thống giáo dục quốc dân.",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "Điều 1",
+                ".",
+                "Nhà giáo trẻ tiêu biểu"
+            ],
+            "emphasized_text_tags": [
+                "b",
+                "b",
+                "i"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "a09b52e0fe628a90489d2d8c25be079c",
+            "category": "NarrativeText",
+            "element_id": "ec2321142ce7c52e3256a3378f8eb467"
+        }
+    },
+    {
+        "page_content": "Điều 2. Ban Thanh niên Trường học Trung ương Đoàn là cơ quan thường trực giải thưởng, có trách nhiệm tham mưu Ban Bí thư Trung ương Đoàn chỉ đạo tổ chức thực hiện việc trao tặng giải thưởng “Nhà giáo trẻ tiêu biểu” cấp Trung ương hàng năm.",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "Điều 2",
+                ".",
+                "Nhà giáo trẻ tiêu biểu"
+            ],
+            "emphasized_text_tags": [
+                "b",
+                "b",
+                "i"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "a09b52e0fe628a90489d2d8c25be079c",
+            "category": "NarrativeText",
+            "element_id": "8c89d31d40062d087fec0cdf88ba46fb"
+        }
+    },
+    {
+        "page_content": "Điều 3. Quyết định này có hiệu lực kể từ ngày ký.",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "Điều 3",
+                "."
+            ],
+            "emphasized_text_tags": [
+                "b",
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "a09b52e0fe628a90489d2d8c25be079c",
+            "category": "NarrativeText",
+            "element_id": "8ffcea24e1f360dde83c502bfb424e21"
+        }
+    },
+    {
+        "page_content": "Điều 4. Ban Thanh niên Trường học, Văn phòng, các ban, đơn vị trực              thuộc Trung ương Đoàn, các tỉnh, thành đoàn, đoàn trực thuộc căn cứ quyết định thi hành.",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "category_depth": 0,
+            "emphasized_text_contents": [
+                "Điều 4",
+                "."
+            ],
+            "emphasized_text_tags": [
+                "b",
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "a09b52e0fe628a90489d2d8c25be079c",
+            "category": "NarrativeText",
+            "element_id": "62e68fc0c75848afc6ef885ec40bc756"
+        }
+    },
+    {
+        "page_content": "Nơi nhận: - Như điều 4; - Ban Dân vận TW, Ban Tuyên giáo TW,  Văn phòng TW, Ban Thi đua - Khen thưởng TW (để báo cáo); - Các Bộ, ngành, cơ quan Trung ương; - Ban Bí thư TW Đoàn; - BTV các tỉnh, thành đoàn, đoàn trực thuộc; - Các cơ quan thông tấn, báo chí, tổ chức xã hội; - Lưu TNTH,VP. TM. BAN BÍ THƯ TRUNG ƯƠNG ĐOÀN BÍ THƯ THỨ NHẤT (Đã ký) Lê Quốc Phong",
+        "metadata": {
+            "source": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input/Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "emphasized_text_contents": [
+                "Nơi nhận:",
+                "TM. BAN BÍ THƯ TRUNG ƯƠNG ĐOÀN",
+                "(Đã ký)",
+                "(Đã ký)",
+                "Lê Quốc Phong"
+            ],
+            "emphasized_text_tags": [
+                "b",
+                "b",
+                "b",
+                "i",
+                "b"
+            ],
+            "file_directory": "/Users/admin/Working/thaibinh-chatbot/Crud_neo4j/input",
+            "filename": "Quyết định ban hành Quy chế nhà giáo trẻ tiêu biêu.docx",
+            "last_modified": "2024-12-08T17:26:25",
+            "text_as_html": "<table><tr><td>Nơi nhận: - Như điều 4; - Ban Dân vận TW, Ban Tuyên giáo TW, Văn phòng TW, Ban Thi đua - Khen thưởng TW (để báo cáo); - Các Bộ, ngành, cơ quan Trung ương; - Ban Bí thư TW Đoàn; - BTV các tỉnh, thành đoàn, đoàn trực thuộc; - Các cơ quan thông tấn, báo chí, tổ chức xã hội; - Lưu TNTH,VP.</td><td>TM. BAN BÍ THƯ TRUNG ƯƠNG ĐOÀN BÍ THƯ THỨ NHẤT (Đã ký) Lê Quốc Phong</td></tr></table>",
+            "languages": [
+                "vie"
+            ],
+            "filetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "parent_id": "a09b52e0fe628a90489d2d8c25be079c",
+            "category": "Table",
+            "element_id": "cd98452c2b51b1ac6ee04a57d44d5575"
+        }
+    }
+]

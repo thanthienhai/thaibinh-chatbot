@@ -34,8 +34,6 @@ def explore_document(question: str) -> str:
     """
     
     result =  get_chunk(question)
-    print("Here is the result of the retriever ")
-    print(result)
     return result
 
 
@@ -75,6 +73,7 @@ agent_tools = [
 ]
 def get_memory(session_id):
     return Neo4jChatMessageHistory(session_id=session_id, graph=graph)
+
 agent_prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -101,7 +100,7 @@ agent_prompt = ChatPromptTemplate.from_messages(
                 •	Cung cấp câu trả lời với định dạng dễ theo dõi khi mô tả quy trình hoặc danh sách.
                 8. Lưu ý:
                     Câu trả lời không nên quá ngắn. Nếu câu trả lời quá ngắn bạn có thể giải thích thêm. Bạn nên thêm phần tương tác với người dùng ở cuối câu trả lời và khuyến khích họ hỏi thêmc các chủ đề liên quan. 
-
+                9. Khi không tìm được tài liệu trong hệ thông cung cấp hãy nói người dùng sử dụng cách diễn đạt khác. Nếu 2 lần vẫn không thể hỗ trợ. Hãy cung cấp cho  người dùng thông tin chăm sóc khách hàng để người dùng tự liên hệ.
             Ví dụ:
             Câu hỏi: Quy trình kết nạp đoàn viên Đoàn Thanh niên Cộng sản Hồ Chí Minh như thế nào?
             Câu trả lời:
@@ -113,7 +112,7 @@ agent_prompt = ChatPromptTemplate.from_messages(
             Previous conversation history:
             """
         ),
-        MessagesPlaceholder(variable_name="chat_history"),
+        
 
         ("user", "{input}"),
         MessagesPlaceholder(variable_name="agent_scratchpad"),
