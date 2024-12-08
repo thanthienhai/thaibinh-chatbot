@@ -9,7 +9,7 @@ import tempfile
 import asyncio
 import logging
 from contextlib import asynccontextmanager
-
+from handle_unstructure_pdf import chunk_text
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -49,7 +49,7 @@ async def create_file(file: UploadFile = File(...)):
             raise HTTPException(status_code=400, detail="File contains no extractable text")
 
         # Chunk text with overlap
-        chunks = chunk_text_with_page_info(page_texts, chunk_size=1000, overlap=200)
+        chunks = chunk_text(file.filename)
 
         # Store in Neo4j
         file_id = await neo4j_client.create_file_with_chunks(file.filename, chunks)

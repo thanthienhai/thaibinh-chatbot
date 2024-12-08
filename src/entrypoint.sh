@@ -5,7 +5,7 @@ echo "Starting RAG FastAPI service..."
 # export PYTHONPATH="/Users/admin/Working/thaibinh-chatbot"
 
 # Start the main application
-uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 echo "Done RAG FastAPI service..."
 
 # uvicorn main:app --host 127.0.0.1 --port 8000

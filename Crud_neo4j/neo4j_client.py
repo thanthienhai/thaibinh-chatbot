@@ -19,7 +19,6 @@ class Neo4jClient:
         self._user = user or os.environ.get("NEO4J_USER", "neo4j")
         self._password = password or os.environ.get("NEO4J_PASSWORD", "test")
         self._driver = AsyncGraphDatabase.driver(self._uri, auth=(self._user, self._password))
-        asyncio.run(self.create_constraints())
         logger.info("Connected to Neo4j (Async)")
 
     async def close(self):
@@ -35,29 +34,6 @@ class Neo4jClient:
                 records.append(record.data())
             # print(records)
         return records
-    async def create_constraints(self):
-        """
-        Create uniqueness constraints for File.file_id and Chunk.chunk_id.
-        """
-        constraints = [
-            """
-            CREATE CONSTRAINT IF NOT EXISTS
-            FOR (f:File)
-            REQUIRE f.file_id IS UNIQUE;
-            """,
-            """
-            CREATE CONSTRAINT IF NOT EXISTS
-            FOR (c:Chunk)
-            REQUIRE c.chunk_id IS UNIQUE;
-            """
-        ]
-        async with self._driver.session() as session:
-            for constraint in constraints:
-                try:
-                    await session.run(constraint)
-                    logger.info("Constraint created successfully.")
-                except Exception as e:
-                    logger.error(f"Error creating constraint: {e}")
 
     async def create_file_with_chunks(self, filename, chunks):
         # Generate a unique file_id using UUID4
@@ -73,22 +49,22 @@ class Neo4jClient:
     async def _create_file_and_chunks_tx(tx, file_id, filename, chunks, link="demo_link"):
         # Create the File node
         await tx.run("""
-        CREATE (f:File {file_id: $file_id, filename: $filename, link: $link, upload_date: datetime()})
+        CREATE (f:File {file_id: $file_id, filename: $filename, link: $link, upload_date: datetime() })
         """, file_id=file_id, filename=filename, link=link)
         
         prev_chunk_id = None
         for chunk in chunks:
             # Construct a unique chunk_id based on file_id and chunk["chunk_id"]
-            c_id = f"{file_id}_chunk_{chunk['chunk_id']}"
-            text = chunk["text"]  # Ensure consistency with chunking function
-            order = chunk["order"]
-            page_number = chunk["page_number"]  # could be None or an integer
-            
+            page_number = chunk["metadata"]["page_number"] # could be None or an integer
+            element_id = chunk["metadata"]["element_id"]
+            c_id = f"{filename} +page_+{page_number}+_+ {element_id}"
+            text = chunk["page_content"]  # Ensure consistency with chunking function
+
             await tx.run("""
             MATCH (f:File {file_id: $file_id})
-            CREATE (c:Chunk {chunk_id: $chunk_id, text: $text, order: $order, page_number: $page_number})
+            CREATE (c:Chunk {chunk_id: $chunk_id, text: $text, page_number: $page_number, content_embedding:[]})
             CREATE (f)-[:HAS_CHUNK]->(c)
-            """, file_id=file_id, chunk_id=c_id, text=text, order=order, page_number=page_number)
+            """, file_id=file_id, chunk_id=c_id, text=text, page_number=page_number)
             
             # Link the previous chunk
             if prev_chunk_id is not None:

@@ -34,7 +34,7 @@ elif action == "List Files":
             start = (page - 1)*page_size
             end = start+page_size
             for f in files[start:end]:
-                st.write(f"**File ID**: {f['file_id']}\n, Filename: {f['filename']}\n, Uploaded: {f['upload_date']}")
+                st.write(f"**File ID**: {f['file_id']}\n")
             total_pages = math.ceil(total/page_size)
             st.write(f"Page {page} of {total_pages}")
         else:

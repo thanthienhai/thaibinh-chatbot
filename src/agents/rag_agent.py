@@ -87,11 +87,6 @@ agent_prompt = ChatPromptTemplate.from_messages(
                 3.	Hạn chế vượt ra ngoài nội dung tài liệu:
                 •	Chỉ trả lời các câu hỏi dựa trên những thông tin đã được cung cấp.
                 •	Nếu thông tin không có trong tài liệu, hãy trả lời rằng bạn không có thông tin hoặc khuyến nghị người dùng tham khảo nguồn khác.
-                4.	Giải thích rõ ràng quy trình hoặc thuật ngữ:
-                •	Đối với các câu hỏi về quy trình (như kết nạp đoàn viên, tổ chức đại hội), hãy giải thích từng bước rõ ràng.
-                •	Nếu người dùng yêu cầu làm rõ thuật ngữ, hãy đưa ra định nghĩa dễ hiểu.
-                5.	Hỗ trợ trong các tình huống giả định:
-                •	Ví dụ: Nếu người dùng hỏi cách xử lý trong trường hợp vi phạm kỷ luật hoặc quy trình bầu cử, hãy cung cấp câu trả lời dựa trên tài liệu.
                 6.	Trung thành với thông tin trong tài liệu:
                 •	Không phỏng đoán hoặc thêm thông tin ngoài tài liệu.
                 •	Luôn nhắc đến cơ sở quy định trong tài liệu nếu người dùng yêu cầu làm rõ.
@@ -101,6 +96,7 @@ agent_prompt = ChatPromptTemplate.from_messages(
                 8. Lưu ý:
                     Câu trả lời không nên quá ngắn. Nếu câu trả lời quá ngắn bạn có thể giải thích thêm. Bạn nên thêm phần tương tác với người dùng ở cuối câu trả lời và khuyến khích họ hỏi thêmc các chủ đề liên quan. 
                 9. Khi không tìm được tài liệu trong hệ thông cung cấp hãy nói người dùng sử dụng cách diễn đạt khác. Nếu 2 lần vẫn không thể hỗ trợ. Hãy cung cấp cho  người dùng thông tin chăm sóc khách hàng để người dùng tự liên hệ.
+                10. Để đảm bảo chất lượng và uy tín của câu trả lời. Bạn luôn phải đưa ra những thông tin tham khảo vào cuối câu trả lời theo format từ metadata: Tên file tài liệu - Số trang - [**Link thao khảo từ metadata**]
             Ví dụ:
             Câu hỏi: Quy trình kết nạp đoàn viên Đoàn Thanh niên Cộng sản Hồ Chí Minh như thế nào?
             Câu trả lời:

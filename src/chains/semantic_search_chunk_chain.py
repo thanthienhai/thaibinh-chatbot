@@ -17,25 +17,28 @@ from llm.get_graph import get_graph_function
 graph = get_graph_function()
 embedding_func = get_embedding_function()
 model = get_model_function()
+
 neo4j_vector_index = Neo4jVector.from_existing_graph(
     embedding_func,
     graph=graph,
-    index_name="chunk_content",
+    index_name="chunk_content_embedding",
     node_label="Chunk",
-    text_node_properties=["content"],
+    text_node_properties=["text"],
     embedding_node_property="content_embedding",
+    
     retrieval_query="""
     RETURN score,
     {
-        content: node.content,
-        prev_chunk: node.prev_chunk,
-        next_chunk: node.next_chunk,
-        prev_contents: [(node)-[:prev]->(prevChunk) | prevChunk.content],
-        next_contents: [(node)-[:next]->(nextChunk) | nextChunk.content]
+        content: node.text,
+        prev_contents: [(node)-[:HAS_NEXT]->(prevChunk) | prevChunk.text],
+        next_contents: [(node)-[:HAS_PREV]->(nextChunk) | nextChunk.text]
     } AS text,
 
     {
-    data: node.id
+    data: node.id,
+    filename: [(file)-[:HAS_CHUNK]->(node) | file.filename],
+    link: [(file)-[:HAS_CHUNK]->(node) | file.link],
+    page_number: node.page_number
     } AS metadata
     """,
     
@@ -80,8 +83,12 @@ chunk_retriever = create_retrieval_chain(
 )
 
 def get_chunk(input):
-    return chunk_retriever.invoke({"input": input})
-
+    result = chunk_retriever.invoke({"input": input})
+    print(result)
+    return result
+# input = "Công tác tuyên truyền, triển khai phong trào “Sinh viên 5 tốt"
+# result = chunk_retriever.invoke({"input": input})
+# print(result)
 # content_vector_chain.combine_documents_chain.llm_chain.prompt = review_prompt
 # result = get_chunk("Cho tôi về độ tuổi gia nhập đoàn")
 # print(result)

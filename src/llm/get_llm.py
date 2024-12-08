@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables once
-if load_dotenv(".env"):
+if load_dotenv("src/.env"):
     print("✅✅Environment file in llm loaded successfully")
 else:
     print("❌❌Environment file in llm failed to load")
@@ -35,7 +35,7 @@ def get_model_function():
     model = ChatOpenAI(
         openai_api_key=api_key,
         model=model_name,
-        temperature=0.3,
+        temperature=0,
     )
     return model
 
