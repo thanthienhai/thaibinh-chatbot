@@ -35,7 +35,7 @@ def get_model_function():
     model = ChatOpenAI(
         openai_api_key=api_key,
         model=model_name,
-        temperature=0,
+        temperature=0.3,
     )
     return model
 
