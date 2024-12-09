@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables from the .env file
-if load_dotenv("src/.env"):
+if load_dotenv(".env"):
     print("✅✅Environment file in graph loaded successfully")
 else:
     print("❌❌Environment file failed to load")

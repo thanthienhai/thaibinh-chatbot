@@ -145,4 +145,5 @@ chat_agent = RunnableWithMessageHistory(
     input_messages_key="input",
     history_messages_key="chat_history",
 )
-
+def get_agent():
+    return chat_agent
