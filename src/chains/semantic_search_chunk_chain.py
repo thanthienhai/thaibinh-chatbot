@@ -44,8 +44,9 @@ neo4j_vector_index = Neo4jVector.from_existing_graph(
     
 )
 
-retriever = neo4j_vector_index.as_retriever(search_kwargs={'k': 3})
+chunk_retriever = neo4j_vector_index.as_retriever(search_kwargs={'k': 3})
 
+# return chunk_retriever
 review_template = """Your job is to use product's description to answer questions about
 with a product or service. Use the following context to answer questions, 
 focusing on details that are on the context but don't make up any information that's not in the context. 
@@ -78,7 +79,7 @@ print("✅✅ Get semantic search step")
 
 question_answer_chain = create_stuff_documents_chain(model, review_prompt)
 chunk_retriever = create_retrieval_chain(
-    retriever,
+    chunk_retriever,
     question_answer_chain
 )
 

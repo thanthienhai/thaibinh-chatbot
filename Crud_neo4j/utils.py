@@ -4,7 +4,7 @@ import os
 import io
 from typing import List, Optional
 import pdfplumber
-from docx import Document
+# from docx import Document
 import tempfile
 import subprocess
 import uuid
